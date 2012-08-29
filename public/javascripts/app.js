@@ -110,6 +110,36 @@
   }
 }));
 (this.require.define({
+  "routers/main_router": function(exports, require, module) {
+    (function() {
+  var __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  exports.MainRouter = (function(_super) {
+
+    __extends(MainRouter, _super);
+
+    function MainRouter() {
+      MainRouter.__super__.constructor.apply(this, arguments);
+    }
+
+    MainRouter.prototype.routes = {
+      '': 'home'
+    };
+
+    MainRouter.prototype.home = function() {
+      return $('body').html(app.homeView.render().el);
+    };
+
+    return MainRouter;
+
+  })(Backbone.Router);
+
+}).call(this);
+
+  }
+}));
+(this.require.define({
   "views/form_view": function(exports, require, module) {
     (function() {
   var __hasProp = Object.prototype.hasOwnProperty,
@@ -163,36 +193,6 @@
     return HomeView;
 
   })(Backbone.View);
-
-}).call(this);
-
-  }
-}));
-(this.require.define({
-  "routers/main_router": function(exports, require, module) {
-    (function() {
-  var __hasProp = Object.prototype.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
-
-  exports.MainRouter = (function(_super) {
-
-    __extends(MainRouter, _super);
-
-    function MainRouter() {
-      MainRouter.__super__.constructor.apply(this, arguments);
-    }
-
-    MainRouter.prototype.routes = {
-      '': 'home'
-    };
-
-    MainRouter.prototype.home = function() {
-      return $('body').html(app.homeView.render().el);
-    };
-
-    return MainRouter;
-
-  })(Backbone.Router);
 
 }).call(this);
 
