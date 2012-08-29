@@ -1,0 +1,11 @@
+# StackMob config file #
+########################
+.stackmob
+ 
+# OS generated files #
+######################
+.DS_Store*
+.DS_STORE
+ehthumbs.db
+Icon?
+Thumbs.db

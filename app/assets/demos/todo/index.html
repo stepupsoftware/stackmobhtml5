@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>StackMob - ToDo</title>
+ 
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+ 
+
+    <!-- templates -->
+    <script type="text/template" id="listItemTemplate">    
+        <li>
+          <a href="#update/<%= todo_id %>" data-id="<%= todo_id %>"><%= name %></a>
+        </li>
+    </script>
+
+
+    <script type="text/template" id="home">
+        <div data-role="header">
+            <a href="#add" data-role="button" data-icon="add">Add</a>
+            <h1>StackMob ToDo</h1>
+        </div>
+        <div data-role="content"></div>
+    </script>
+
+    <script type="text/template" id="add">
+        <div data-role="header">
+            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
+            <h1>Add ToDo</h1>
+        </div>
+        <div data-role="content">
+            <form name="addForm" id="addForm">
+                <input type="text" name="name" id="name" placeholder="new todo" value="">
+                <input type="button" id="addBtn" value="add">
+            </form>
+        </div>
+    </script>
+
+    <script type="text/template" id="update">
+        <div data-role="header">
+            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
+            <h1>Update ToDo</h1>
+        </div>
+        <div data-role="content">
+            <form name="updateForm" id="updateForm">
+                <input type="text" name="name" id="name" value="<%=  name %>">
+                <input type="button" id="updateBtn" value="save">
+                <input type="button" id="deleteBtn" value="delete">
+            </form>
+        </div>
+    </script>
+
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).bind("mobileinit", function(){
+          $.mobile.page.prototype.options.addBackBtn= false;
+          $.mobile.ajaxEnabled = false;
+          $.mobile.linkBindingEnabled = false;
+          $.mobile.hashListeningEnabled = false;
+          $.mobile.pushStateEnabled = false;
+
+           // Remove page from DOM when it's being replaced
+          $('div[data-role="page"]').live('pagehide', function (event, ui) {
+              $(event.currentTarget).remove();
+          });
+      });
+    </script>
+
+     <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+    <script type="text/javascript" src="http://static.stackmob.com/js/json2-min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/underscore-1.3.0-min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/backbone-0.5.3-min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/stackmob-js-0.2.1-min.js"></script>
+
+    <!-- App specific scripts -->
+    <script src="js/app.js"></script>
+    
+    <!-- maximum scale added to stop zoom on select controls -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  </head>
+  <body>
+
+  </body>
+</html>

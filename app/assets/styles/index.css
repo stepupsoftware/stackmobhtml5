@@ -1,0 +1,72 @@
+body {
+				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#runmessage {
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	padding: 10px;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz border-radius: 10px;
+	font-weight: bold;
+}
+
+code { font-weight: bold; }
+
+.button, .button a
+{
+	background: #98be47;
+	background: linear-gradient(top, #a8cf43, #98be47);
+	background: -moz-linear-gradient(top, #a8cf43, #98be47);
+	background: -ms-linear-gradient(top, #a8cf43, #98be47);
+	background: -o-linear-gradient(top, #a8cf43, #98be47);
+	background: -webkit-linear-gradient(top, #a8cf43, #98be47);
+	border: 1px solid #8cac42;
+	border-bottom-color: #7b9b36;
+	border-radius: 4px;
+	border-top-color: #94b146;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .5);
+	color: #fff !important;
+	cursor: pointer;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	moz-border-radius: 4px;
+	moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .5);
+	ms-border-radius: 4px;
+	ms-box-shadow: 0 2px 2px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .5);
+	o-border-radius: 4px;
+	o-box-shadow: 0 2px 2px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .5);
+	padding: 6px 14px;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .4);
+	webkit-border-radius: 4px;
+	webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .5);
+}
+.button:hover, .button a:hover
+{
+	background: #67a215;
+	background: linear-gradient(top, #9dbf46, #67a215);
+	background: -moz-linear-gradient(top, #9dbf46, #67a215);
+	background: -ms-linear-gradient(top, #9dbf46, #67a215);
+	background: -o-linear-gradient(top, #9dbf46, #67a215);
+	background: -webkit-linear-gradient(top, #9dbf46, #67a215);
+	border: 1px solid #699631;
+	border-bottom-color: #457119;
+	border-top-color: #6d9e34;
+	color: rgba(250, 250, 250, .96);
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .8);
+}
+.button:active, .button a:active
+{
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5);
+	moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5);
+	ms-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5);
+	o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5);
+	padding: 4px 14px 7px;
+	webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5);
+}
